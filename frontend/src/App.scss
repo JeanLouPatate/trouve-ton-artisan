@@ -1,0 +1,67 @@
+// Styles globaux de l'application
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Graphik', 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+  color: #333;
+  background-color: #fff;
+  line-height: 1.6;
+}
+
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+// Variables
+$primary-color: #0066cc;
+$secondary-color: #0052a3;
+$text-color: #333;
+$text-muted: #666;
+$border-color: #e0e0e0;
+$bg-light: #f8f9fa;
+
+// Boutons
+.btn-primary {
+  background-color: $primary-color;
+  border-color: $primary-color;
+
+  &:hover {
+    background-color: $secondary-color;
+    border-color: $secondary-color;
+  }
+}
+
+// Liens
+a {
+  color: $primary-color;
+  text-decoration: none;
+
+  &:hover {
+    color: $secondary-color;
+  }
+}
+
+// Cards
+.card {
+  border-radius: 10px;
+}
+
+// Utilitaires
+.text-primary {
+  color: $primary-color !important;
+}
+
+.bg-primary {
+  background-color: $primary-color !important;
+}

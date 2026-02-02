@@ -1,0 +1,65 @@
+// Styles pour le composant Footer
+
+.footer {
+  background-color: #f8f9fa;
+  padding: 3rem 0 1rem;
+  margin-top: auto;
+  border-top: 1px solid #dee2e6;
+
+  h5 {
+    color: #0066cc;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+  }
+
+  ul {
+    li {
+      margin-bottom: 0.5rem;
+
+      a {
+        color: #333;
+        text-decoration: none;
+        transition: color 0.3s ease;
+
+        &:hover {
+          color: #0066cc;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  address {
+    margin-bottom: 0;
+    line-height: 1.8;
+
+    a {
+      color: #0066cc;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .text-center {
+    p {
+      color: #6c757d;
+      font-size: 0.9rem;
+    }
+  }
+}
+
+// Responsive
+@media (max-width: 767px) {
+  .footer {
+    padding: 2rem 0 1rem;
+    text-align: center;
+
+    address {
+      text-align: center;
+    }
+  }
+}

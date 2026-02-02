@@ -1,0 +1,11 @@
+// Styles pour le composant StarRating
+
+.star-rating {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+
+  i {
+    font-size: 1rem;
+  }
+}

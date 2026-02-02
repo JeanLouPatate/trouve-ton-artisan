@@ -1,0 +1,110 @@
+// Styles pour la page Home
+
+.home-page {
+  // Section Hero
+  .hero-section {
+    background: linear-gradient(135deg, #0066cc 0%, #0052a3 100%);
+    color: white;
+    padding: 4rem 0;
+    margin-bottom: 3rem;
+
+    .hero-title {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    .hero-subtitle {
+      font-size: 1.2rem;
+      opacity: 0.9;
+    }
+  }
+
+  // Section Comment ça marche
+  .how-it-works-section {
+    padding: 3rem 0;
+
+    .section-title {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #333;
+    }
+
+    .step-card {
+      border: none;
+      background-color: #f8f9fa;
+      border-radius: 15px;
+      padding: 1.5rem;
+      transition: all 0.3s ease;
+
+      &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 102, 204, 0.1);
+        background-color: #fff;
+      }
+
+      .step-number {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: #0066cc;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin: 0 auto 1rem;
+      }
+
+      .step-icon {
+        font-size: 2.5rem;
+        color: #0066cc;
+        margin-bottom: 1rem;
+      }
+
+      .step-text {
+        font-size: 1rem;
+        color: #333;
+        font-weight: 500;
+        line-height: 1.5;
+      }
+    }
+  }
+
+  // Section Artisans du mois
+  .top-artisans-section {
+    padding: 3rem 0 4rem;
+    background-color: #f8f9fa;
+
+    .section-title {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #333;
+    }
+  }
+}
+
+// Responsive
+@media (max-width: 767px) {
+  .home-page {
+    .hero-section {
+      padding: 3rem 0;
+
+      .hero-title {
+        font-size: 1.8rem;
+      }
+
+      .hero-subtitle {
+        font-size: 1rem;
+      }
+    }
+
+    .how-it-works-section,
+    .top-artisans-section {
+      .section-title {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}

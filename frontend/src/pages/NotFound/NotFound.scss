@@ -1,0 +1,33 @@
+.not-found-page {
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .error-icon {
+    i {
+      font-size: 5rem;
+      color: #ffc107;
+    }
+  }
+
+  .error-code {
+    font-size: 6rem;
+    font-weight: 700;
+    color: #0066cc;
+    margin: 0;
+  }
+
+  .error-title {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #333;
+  }
+
+  .error-message {
+    font-size: 1.1rem;
+    color: #666;
+    max-width: 500px;
+    margin: 0 auto 2rem;
+  }
+}

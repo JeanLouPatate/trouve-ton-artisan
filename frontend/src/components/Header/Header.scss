@@ -1,0 +1,76 @@
+// Styles pour le composant Header
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #fff;
+
+  .navbar {
+    padding: 1rem 0;
+  }
+
+  .navbar-brand {
+    img {
+      transition: opacity 0.3s ease;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+
+  .nav-link-custom {
+    font-weight: 500;
+    color: #333;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: #0066cc;
+    }
+
+    &.active {
+      color: #0066cc;
+      font-weight: 600;
+    }
+  }
+
+  form {
+    .form-control {
+      border-radius: 25px 0 0 25px;
+      border-right: none;
+      min-width: 200px;
+
+      &:focus {
+        box-shadow: none;
+        border-color: #0066cc;
+      }
+    }
+
+    .btn {
+      border-radius: 0 25px 25px 0;
+      background-color: #0066cc;
+      border-color: #0066cc;
+
+      &:hover {
+        background-color: #0052a3;
+        border-color: #0052a3;
+      }
+    }
+  }
+}
+
+// Responsive
+@media (max-width: 991px) {
+  .header {
+    form {
+      margin-top: 1rem;
+      width: 100%;
+
+      .form-control {
+        width: 100%;
+      }
+    }
+  }
+}

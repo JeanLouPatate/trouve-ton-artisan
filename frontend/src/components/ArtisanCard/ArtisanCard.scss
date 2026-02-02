@@ -1,0 +1,67 @@
+// Styles pour le composant ArtisanCard
+
+.artisan-card {
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+    border-color: #0066cc;
+  }
+
+  a {
+    color: inherit;
+  }
+
+  .card-body {
+    padding: 1.5rem;
+  }
+
+  .artisan-name {
+    color: #333;
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .artisan-rating {
+    display: flex;
+    align-items: center;
+
+    .rating-value {
+      font-weight: 600;
+      color: #666;
+      font-size: 0.9rem;
+    }
+  }
+
+  .artisan-speciality {
+    color: #0066cc;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+
+    i {
+      color: #0066cc;
+    }
+  }
+
+  .artisan-location {
+    font-size: 0.9rem;
+    margin-bottom: 0;
+
+    i {
+      color: #999;
+    }
+  }
+}
+
+// Responsive
+@media (max-width: 767px) {
+  .artisan-card {
+    margin-bottom: 1rem;
+  }
+}
