@@ -44,15 +44,16 @@ const Header = () => {
           {/* Logo */}
           <Navbar.Brand as={Link} to="/" className="d-flex align-items-center">
             <img
-              src="/logo.png"
+              src="/Logo.png"
               alt="Trouve ton artisan - Région Auvergne-Rhône-Alpes"
               height="50"
               className="d-inline-block align-top"
             />
+
           </Navbar.Brand>
 
           <Navbar.Toggle aria-controls="navbar-nav" />
-          
+
           <Navbar.Collapse id="navbar-nav">
             {/* Menu de navigation */}
             <Nav className="me-auto">
