@@ -47,30 +47,6 @@ app.use(cors({
   allowedHeaders: ['Content-Type', 'Authorization', 'x-api-key']
 }));
 
-// Rate limiting : Limite le nombre de requêtes par IP
-//const limiter = rateLimit({
-  windowMs: 15 * 60 * 1000, // 15 minutes
-  max: 100, // Maximum 100 requêtes par fenêtre
-  message: {
-    success: false,
-    message: 'Trop de requêtes. Veuillez réessayer dans 15 minutes.'
-  },
-  standardHeaders: true,
-  legacyHeaders: false
-});
-//app.use('/api/', limiter);
-
-// Rate limiting spécifique pour le formulaire de contact
-const contactLimiter = rateLimit({
-  windowMs: 60 * 60 * 1000, // 1 heure
-  max: 5, // Maximum 5 emails par heure
-  message: {
-    success: false,
-    message: 'Trop de messages envoyés. Veuillez réessayer dans une heure.'
-  }
-});
-app.use('/api/contact', contactLimiter);
-
 // Parsing du body JSON
 app.use(express.json({ limit: '10mb' }));
 app.use(express.urlencoded({ extended: true, limit: '10mb' }));
