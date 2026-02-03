@@ -14,7 +14,7 @@ const seedDatabase = async () => {
       { nom: 'Bâtiment' },
       { nom: 'Fabrication' },
       { nom: 'Services' }
-    ]);
+    ], { ignoreDuplicates: true });
     console.log('✅ Catégories créées');
 
     // Spécialités
@@ -34,7 +34,7 @@ const seedDatabase = async () => {
       { nom: 'Fleuriste', categorie_id: 4 },
       { nom: 'Toiletteur', categorie_id: 4 },
       { nom: 'Webdesign', categorie_id: 4 }
-    ]);
+    ], { ignoreDuplicates: true });
     console.log('✅ Spécialités créées');
 
     // Artisans
@@ -56,8 +56,8 @@ const seedDatabase = async () => {
       { nom: 'Le monde des fleurs', specialite_id: 13, note: 4.6, ville: 'Annonay', a_propos: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', email: 'contact@le-monde-des-fleurs-annonay.fr', site_web: 'https://le-monde-des-fleurs-annonay.fr', top: false },
       { nom: 'Valérie Laderoute', specialite_id: 14, note: 4.5, ville: 'Valence', a_propos: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', email: 'v-laredoute@gmail.com', site_web: null, top: false },
       { nom: 'CM Graphisme', specialite_id: 15, note: 4.4, ville: 'Valence', a_propos: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', email: 'contact@cm-graphisme.com', site_web: 'https://cm-graphisme.com', top: false }
-    ]);
-        console.log('✅ Artisans créés');
+    ], { ignoreDuplicates: true });
+    console.log('✅ Artisans créés');
     console.log('🎉 Base de données peuplée avec succès !');
     process.exit(0);
   } catch (error) {
