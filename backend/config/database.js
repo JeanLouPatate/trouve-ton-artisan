@@ -19,17 +19,17 @@ const sequelize = new Sequelize(
     
     // Pool de connexions pour optimiser les performances
     pool: {
-      max: 5,           // Nombre maximum de connexions
-      min: 0,           // Nombre minimum de connexions
-      acquire: 30000,   // Temps max (ms) pour obtenir une connexion
-      idle: 10000       // Temps max (ms) avant de fermer une connexion inactive
+      max: 5,
+      min: 0,
+      acquire: 30000,
+      idle: 10000
     },
     
     // Options de sécurité
     define: {
-      timestamps: true,         // Active created_at et updated_at
-      underscored: false,       // Utilise camelCase pour les noms
-      freezeTableName: true     // Empêche Sequelize de pluraliser les noms de tables
+      timestamps: true,
+      underscored: false,
+      freezeTableName: true
     },
     
     // Timezone
@@ -44,8 +44,18 @@ const testConnection = async () => {
     console.log('✅ Connexion à MySQL réussie !');
   } catch (error) {
     console.error('❌ Erreur de connexion à MySQL:', error.message);
-    process.exit(1); // Arrête le serveur si la connexion échoue
+    process.exit(1);
   }
 };
 
-module.exports = { sequelize, testConnection };
+// Synchroniser les modèles avec la base de données (crée les tables automatiquement)
+const syncDatabase = async () => {
+  try {
+    await sequelize.sync({ alter: true });
+    console.log('✅ Tables créées/synchronisées avec succès !');
+  } catch (error) {
+    console.error('❌ Erreur de synchronisation:', error.message);
+  }
+};
+
+module.exports = { sequelize, testConnection, syncDatabase };

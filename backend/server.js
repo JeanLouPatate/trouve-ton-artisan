@@ -6,7 +6,7 @@ const express = require('express');
 const cors = require('cors');
 const helmet = require('helmet');
 const rateLimit = require('express-rate-limit');
-const { testConnection } = require('./config/database');
+const { testConnection, syncDatabase } = require('./config/database');
 const { requestLogger, notFound, errorHandler } = require('./middleware/security');
 
 // Import des routes
@@ -107,6 +107,7 @@ const startServer = async () => {
   try {
     // Test de la connexion à la base de données
     await testConnection();
+    await syncDatabase();
 
     // Démarrage du serveur
     app.listen(PORT, () => {
